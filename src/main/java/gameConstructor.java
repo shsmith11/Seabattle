@@ -1,10 +1,10 @@
-class GameConstructor {
+class gameConstructor {
     //public int size;
     int[] CoordNum;
     private int size;
     private int shipQty;
 
-    public GameConstructor(int size) {
+    public gameConstructor(int size) {
         this.size = size;
         CoordNum = new int[size*size];
     }
@@ -40,10 +40,15 @@ class GameConstructor {
     public boolean overlaidCheck(int[] CoordCheck){  //Checking if ship are not overlaid to other ship
         boolean CellCheckResult = false;
         for (int j=0; j<= CoordNum.length-1; j++) {
-            if (CoordCheck[j] !=0 && CoordNum[j] !=0 ){
+            if ((CoordCheck[j] ==1 && CoordNum[j] ==2) || (CoordCheck[j] ==2 && CoordNum[j] ==1) ){
                 CellCheckResult = true;
-                System.out.println("Overlaied");
+                System.out.print(" " + j +" Overlaid ");
                 break;
+
+            } else {
+                System.out.print(j +" huy, ");
+                CellCheckResult = false;
+
             }
             System.out.print("");
         }
@@ -53,7 +58,7 @@ class GameConstructor {
         if (!overlaidCheck(CoordCheck)) {
             System.out.println("Ship added to main array");
             for (int j=0; j<= CoordNum.length-1; j++){
-                if (CoordNum[j] ==0 ) {
+                if (CoordNum[j] == 0 ) {
                     CoordNum[j] = CoordCheck[j];
                     System.out.print(" " + j);
                 }

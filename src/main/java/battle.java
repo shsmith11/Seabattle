@@ -1,18 +1,18 @@
-public class Battle {
+public class battle {
     public static void main(String[] args) {
 
         int size = 10;
 
-        GameModel shipKit = new GameModel(size);
+        gameModel shipKit = new gameModel(size);
         int[] shipsKit = shipKit.model(size);
 
-        GameConstructor enemySet = new GameConstructor(size);
+        gameConstructor enemySet = new gameConstructor(size);
         enemySet.shipsBuild(shipsKit);
 
-        GameConstructor ownSet = new GameConstructor( size);
+        gameConstructor ownSet = new gameConstructor( size);
         ownSet.shipsBuild(shipsKit);
 
-        Draw drawShips = new Draw();
+        draw drawShips = new draw();
         drawShips.drawShips(enemySet.getCoordNum(), ownSet.getCoordNum(), size);
 
 
