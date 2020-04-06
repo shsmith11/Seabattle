@@ -8,7 +8,7 @@ public class battle {
         UserInput userInput = new UserInput();
         String userFire = userInput.getUserInput("Enter coordinates for attacking");
 
-        gameModel shipKit = new gameModel(size);3
+        gameModel shipKit = new gameModel(size);
         int[] shipsKit = shipKit.model(size);
 
         gameConstructor enemySet = new gameConstructor(size);
