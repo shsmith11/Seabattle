@@ -29,12 +29,12 @@ public class draw {
 // body start___________
         System.out.println("");
         for (int i=1; i <= size; i++){              //drawing line by line enemy
-           System.out.print(Ycells[i-1] + " |  ");
+           System.out.print(Ycells[i-1] + " | ");
             for (; j <= i*size-1; j++) {
                 System.out.print("["+drawSymbols(enemyCoordNum)[j] + "]");
             }
-            System.out.print("            ");
-            System.out.print(Ycells[i-1] + " |  ");
+            System.out.print("             ");
+            System.out.print(Ycells[i-1] + " | ");
             for (; v <= i*size-1; v++) {            //drawing line by line our
                 System.out.print("["+drawSymbols(ownCoordNum)[v] + "]");
             }
@@ -47,13 +47,15 @@ public class draw {
 
 
     }
-    public String[] drawSymbols(int[] coordNum){  // simbols   ▇ , ◯, ☒ , ✕ , ● ▒ ▓
+    public String[] drawSymbols(int[] coordNum){  // simbols   ▇ , ◯, ☒ , ✕ , ● ▒ ▓  ╸
         String[] symbArr = new String[coordNum.length];
         for (int i=0; i <= coordNum.length-1; i++){
             if (coordNum[i] == 0) symbArr[i] = " ";  // if empty
             if (coordNum[i] == 1) symbArr[i] = "▒";  // if around ship space
             if (coordNum[i] == 2) symbArr[i] = "█";  // if ship
-            if (coordNum[i] == 3) symbArr[i] = "╳";  // if destroyed cell
+            if (coordNum[i] == 3) symbArr[i] = "●";  // if missed
+            if (coordNum[i] == 4) symbArr[i] = "╳";  // if destroyed cell
+            if (coordNum[i] == 5) symbArr[i] = "╳";  // if destroyed cell
         }
         return symbArr;
     }

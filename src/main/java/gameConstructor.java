@@ -46,9 +46,8 @@ class gameConstructor {
                 break;
 
             } else {
-                System.out.print(j +" huy, ");
+                System.out.print(j +" Ok, ");
                 CellCheckResult = false;
-
             }
             System.out.print("");
         }
@@ -62,6 +61,7 @@ class gameConstructor {
                     CoordNum[j] = CoordCheck[j];
                     System.out.print(" " + j);
                 }
+                if (CoordNum[j]==1){CoordNum[j]=0;}
             }
             System.out.println("");
             shipQty--;
