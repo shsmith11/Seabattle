@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class attakToShip {
+public class AttakToShip {
     private int[] coordNum;
     private int size;
 
-    public attakToShip(int[] coordNum, int size) {
+    public AttakToShip(int[] coordNum, int size) {
         this.coordNum = coordNum;
         this.size = size;
     }

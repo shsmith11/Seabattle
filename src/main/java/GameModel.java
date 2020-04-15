@@ -1,11 +1,16 @@
 // chose game model.  10 or 8 cells
 
-public class gameModel {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class GameModel {
+
     private int size;
     private int[] shipsKit = new int[8];
 
-    public gameModel(int size) {
-        this.size = size;            //TODO add size checking
+    public GameModel(int size) {
+        this.size = size;
     }
 
     public int[] model(int size){
@@ -37,7 +42,7 @@ public class gameModel {
             shipsKit[7] = 1; // 1 deck
         }
 //TODO add condition
-            System.out.println("Incorrect field size. Please set 10 or 8");
+
 
         return shipsKit;
     }

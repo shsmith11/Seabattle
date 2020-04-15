@@ -1,9 +1,9 @@
-public class draw {
+public class Draw {
 
     private String[] Ycells = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"};
     private int[] coord = {1,2,3,4,5,6,7,8,9,10};
 
-    public draw(){}
+    public Draw(){}
 
     public void drawShips(int[] enemyCoordNum, int[] ownCoordNum, int size){
 
@@ -53,7 +53,7 @@ public class draw {
             if (coordNum[i] == 0) symbArr[i] = " ";  // if empty
             if (coordNum[i] == 1) symbArr[i] = "▒";  // if around ship space
             if (coordNum[i] == 2) symbArr[i] = "█";  // if ship
-            if (coordNum[i] == 3) symbArr[i] = "●";  // if missed
+            if (coordNum[i] == 3) symbArr[i] = "o";  // if missed
             if (coordNum[i] == 4) symbArr[i] = "╳";  // if destroyed cell
             if (coordNum[i] == 5) symbArr[i] = "╳";  // if destroyed cell
         }

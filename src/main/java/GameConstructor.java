@@ -1,10 +1,10 @@
-class gameConstructor {
+class GameConstructor {
     //public int size;
     int[] CoordNum;
     private int size;
     private int shipQty;
 
-    public gameConstructor(int size) {
+    public GameConstructor(int size) {
         this.size = size;
         CoordNum = new int[size*size];
     }
